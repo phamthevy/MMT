@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MapsActivity">
+
+
+    <Button
+        android:id="@+id/button_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="13dp"
+        android:text="Connect"
+        android:layout_toLeftOf="@+id/textView_time"
+        android:layout_toStartOf="@+id/textView_time" />
+
+    <EditText
+        android:id="@+id/textView_time"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="5000"
+        android:saveEnabled="true"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/button_quit" />
+
+    <EditText
+        android:id="@+id/textView_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Name"
+        android:text="Kiten"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/button_connect"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_connect"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:hint="Name"
+        android:text="Kiten"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+
+        tools:context="com.example.thevy.map.MapsActivity"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/textView_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+
+    <Button
+        android:id="@+id/button_quit"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:visibility="invisible"
+        android:text="Quit"
+        android:textSize="13dp"
+        android:layout_above="@+id/textView_battleStatus" />
+
+    <Button
+        android:id="@+id/button_findmatch"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:textSize="13dp"
+        android:visibility="invisible"
+        android:text="Find"
+        android:layout_toRightOf="@+id/textView_name"
+        android:layout_alignBottom="@+id/button_quit"
+        android:layout_toLeftOf="@+id/button_quit"
+        android:layout_toStartOf="@+id/button_quit" />
+
+    <TextView
+        android:id="@+id/textView_battleStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_name"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView_name"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/textView_name" />
+
+    <TextView
+        android:id="@+id/textView_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/textView_battleStatus"
+        android:layout_alignBottom="@+id/textView_battleStatus"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textView_battleStatus" />
+    <TextView
+        android:id="@+id/textView_IPApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/textView_IPAppc"
+        android:layout_alignBottom="@+id/textView_IPAppc"
+        android:text="IP Analys"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textView_IPAppc" />
+    <EditText
+        android:id="@+id/textView_IPAppc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_result"
+        android:layout_alignParentRight="true"
+        android:hint="IP Analys"
+        android:text="192.168."
+        android:layout_toRightOf="@+id/textView_result"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/textView_result" />
+    <TextView
+        android:id="@+id/textView_IPGateway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/textView_IPGatewayc"
+        android:layout_alignBottom="@+id/textView_IPGatewayc"
+        android:text="IP Gateway"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textView_IPGatewayc" />
+    <EditText
+        android:id="@+id/textView_IPGatewayc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_IPApp"
+        android:layout_alignParentRight="true"
+        android:hint="IP Gateway"
+        android:text="192.168."
+        android:layout_toRightOf="@+id/textView_IPApp"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/textView_IPApp" />
+
+
+
+</RelativeLayout>
